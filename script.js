@@ -126,4 +126,5 @@ themeToggleBtn.addEventListener('click', () => {
   const isDark = document.body.classList.contains('dark-mode');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
   themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
+
 });
