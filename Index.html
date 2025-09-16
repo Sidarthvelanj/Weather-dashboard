@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name= "viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<title>🌦️ Weather app</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id ="weather-container">
+        <div class="title-box">
+        <h1>🌦️ Weather App</h1>
+        </div>
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <img id ="weather-icon" alt="Weather icon">
+        <div id="weather-info"></div>
+        <div id="temp-div"></div>
+        <div id="hourly-forecast"></div>
+        <div id="daily-forecast"></div>
+        <div id="loader" class="loader" style="display: none;"></div>
+        <button id="toggle-theme">🌙</button>
+        <button id="get-weather-btn">Search</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
