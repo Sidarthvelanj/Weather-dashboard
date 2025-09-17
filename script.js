@@ -131,3 +131,4 @@ themeToggleBtn.addEventListener('click', () => {
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
   themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
 });
+
