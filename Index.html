@@ -8,23 +8,30 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id ="weather-container">
-        <div class="title-box">
+    <div id="weather-container">
+    <div id="particles-js"></div>
+    <div class="title-box">
         <h1>🌦️ Weather App</h1>
-        </div>
-        <input type="text" id="city-input" placeholder="Enter city name">
-        <img id ="weather-icon" alt="Weather icon">
-        <div id="weather-info"></div>
-        <div id="temp-div"></div>
-        <div id="hourly-forecast"></div>
-        <div id="daily-forecast"></div>
-        <div id="loader" class="loader" style="display: none;"></div>
-        <button id="toggle-theme">🌙</button>
-        <button id="get-weather-btn">Search</button>
     </div>
+    <div class="search-bar">
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button id="get-weather-btn" aria-label="Search">
+            <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 18C3.686 18 1 15.314 1 12C1 8.686 3.686 6 7 6C7.74 6 8.45 6.13 9.11 6.37C10.17 3.39 13.13 1 16.5 1C20.09 1 23 3.91 23 7.5C23 7.67 22.99 7.83 22.97 8H23C25.21 8 27 9.79 27 12C27 14.21 25.21 16 23 16H7Z" fill="#f08306"/>
+            </svg>
+        </button>
+    </div>
+    <img id="weather-icon" alt="Weather icon">
+    <div id="weather-info"></div>
+    <div id="temp-div"></div>
+    <div id="hourly-forecast"></div>
+    <div id="daily-forecast"></div>
+    <div id="loader" class="loader"></div>
+    <button id="toggle-theme">🌙</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
 
 
