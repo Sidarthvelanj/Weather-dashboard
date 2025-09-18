@@ -109,25 +109,74 @@ function loadParticlesForWeather(weather) {
     window.pJSDom[0].pJS.fn.vendors.destroypJS();
     window.pJSDom = [];
   }
-
-  if (weather.includes('rain')) {
+if (weather.includes('rain')) {
     config = {
-      particles: {
-        number: { value: 80 },
-        shape: {
-          type: "image",
-          image: {
-            src: "rain.png", 
-            width: 2,
-            height: 16
-          }
-        },
-        opacity: { value: 0.7 },
-        size: { value: 16, random: false },
-        move: { enable: true, speed: 25, direction: "bottom", straight: true }
-      }
+        "particles": {
+            "number": {
+                "value": 200,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#9cd5ff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": false,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 5,
+                "direction": "bottom",
+                "random": false,
+                "straight": true,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        }
     };
-  } else if (weather.includes('snow')) {
+}
+ else if (weather.includes('snow')) {
     config = {
       particles: {
         number: { value: 100 },
