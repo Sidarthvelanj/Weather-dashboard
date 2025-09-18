@@ -38,7 +38,7 @@ body {
   transition: all 0.4s ease;
    background-color: rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(20px);
-   background-image: url('lightmode.jpg');
+   background-image: url('Weather gradient.png.png');
    background-size: cover;
    background-position: center;
    animation: float-glass 4s ease-in-out infinite;
@@ -99,7 +99,7 @@ input {
   margin-top: 25px;
 }
 body.dark-mode {
-  background: url('Dark gradient Images.png.png') no-repeat center center fixed;
+  background: url('moody-brushed-metal-background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;
 }
