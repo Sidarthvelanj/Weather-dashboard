@@ -1,7 +1,7 @@
-function showLoaderMin2s(promise) {
+function showLoaderMin1s(promise) {
   const loader = document.getElementById('loader');
   loader.classList.add('active');
-  const minTime = new Promise(resolve => setTimeout(resolve, 2000));
+  const minTime = new Promise(resolve => setTimeout(resolve, 1000));
   return Promise.all([promise, minTime]).then(([result]) => {
     loader.classList.remove('active');
     return result;
@@ -40,7 +40,7 @@ function getWeather() {
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
-    showLoaderMin2s(
+    showLoaderMin1s(
       Promise.all([
         fetch(currentWeatherUrl).then(r => r.json()),
         fetch(forecastUrl).then(r => r.json())
