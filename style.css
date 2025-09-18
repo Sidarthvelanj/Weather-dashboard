@@ -9,8 +9,19 @@ body {
   margin: 0;
   overflow: hidden;
 }
-
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Creates a sidebar and a main content area */
+    gap: 20px;
+    height: 90vh;
+    width: 90vw;
+    padding: 30px;
+    
+    transform: scale(0.8);
+    transform-origin: center center;
+}
 #weather-container {
+  background-size: cover;
   flex-shrink: 1;
   background: rgba(255, 255, 255, 0.3);
   position: relative;
@@ -18,11 +29,25 @@ body {
   max-width: 450px;
   padding: 30px;
   border-radius: 25px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25), 
+      0 20px 60px rgba(0, 0, 0, 0.15); 
+  
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.819);
   text-align: center;
   transition: all 0.4s ease;
+   background-color: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(20px);
+   background-image: url('lightmode.jpg');
+   background-size: cover;
+   background-position: center;
+   animation: float-glass 4s ease-in-out infinite;
+  
+}
+@keyframes float-glass {
+    0% { transform: translateY(0); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25), 0 20px 60px rgba(0, 0, 0, 0.15); }
+    50% { transform: translateY(-20px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 30px 80px rgba(0, 0, 0, 0.2); }
+    100% { transform: translateY(0); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25), 0 20px 60px rgba(0, 0, 0, 0.15); }
 }
 
 #particles-js {
@@ -35,11 +60,11 @@ body {
 }
 
 #weather-container.active {
-  width: 70%;
-  max-width: 800px;
-  max-height: 90%;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 87%;
   padding: 40px 20px;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 #daily-forecast,
 #weather-info,
@@ -62,7 +87,7 @@ body {
 
 h1, h2, label, p {
   color: #000000;
-  margin: 8px 0;
+  margin: 4px 0;
 }
 
 input {
@@ -83,6 +108,7 @@ body.dark-mode #weather-container {
   background: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+  background-image: url('moody-brushed-metal-background.jpg');
 }
 
 body.dark-mode #page-title {
@@ -153,7 +179,8 @@ button:hover {
 }
 
 #hourly-forecast {
-  margin-top: 50px;
+  line-height: 1.3;
+  margin-top: 20px;
   overflow-x: auto;
   white-space: nowrap;
   display: flex;
@@ -189,7 +216,7 @@ button:hover {
   }
 
   #temp-div p {
-    font-size: 40px;
+    font-size: px;
   }
 
   #weather-info {
@@ -251,12 +278,12 @@ button:hover {
   z-index: 1000;
   background: transparent;
   box-shadow: 0 0 0 100vw rgba(0,0,0,0.15);
-  display: none;
-  transition: opacity 0.4s;
+  visibility: hidden;
+  transition: opacity 0.5s;
   opacity: 0;
 }
 .loader.active {
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
